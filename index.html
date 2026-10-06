@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rao Pahlad Singh Public School, Dharuhera</title>
+<meta name="description" content="Interactive 3D campus experience of RPS Public School, Dharuhera, Rewari, Haryana. CBSE affiliated.">
+<meta name="theme-color" content="#07090d">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/ui.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="loader"><div class="ld-in"><img src="assets/logo.svg" alt="" width="72" height="72"><h1>RPS</h1><p>DHARUHERA</p><div class="ld-bar"><i id="ldBar"></i></div></div></div>
+
+<header id="nav"><a class="brand" href="#home"><img src="assets/logo.svg" alt="" width="34" height="34"><span>RPS Dharuhera</span></a>
+<button id="menuBtn" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+<nav id="menu"><a href="#home">Home</a><a href="#about">About</a><a href="#academics">Academics</a><a href="#campus">Campus</a><a href="#activities">Activities</a><a href="#achievements">Achievements</a><a href="#admissions">Admissions</a><a href="#contact">Contact</a></nav></header>
+
+<section id="home">
+<canvas id="stage" aria-label="Interactive 3D campus visualization"></canvas>
+<div class="hero-ui">
+<div class="status"><span class="dot"></span>Interactive campus · Dharuhera, Haryana</div>
+<h2 class="title">Rao Pahlad Singh<br>Public School</h2>
+<p class="town">Dharuhera</p>
+<p class="tag">Where curiosity becomes capability.</p>
+<div class="cta"><a class="btn solid" href="#campus">Explore campus</a><a class="btn" href="#about">Discover RPS</a></div>
+</div>
+<div id="controls" role="toolbar" aria-label="3D controls">
+<button id="bExplore">Explore</button><button id="bTour">Tour</button><button id="bDay">Day / Night</button><button id="bQuality">Quality: <b id="qLabel">High</b></button><button id="bReset">Reset</button></div>
+<aside id="panel" hidden><button id="pClose" aria-label="Close">×</button><h3 id="pTitle"></h3><p id="pText"></p><p class="fact" id="pFact"></p><button class="btn solid sm" id="pReturn">Return to campus</button></aside>
+<div id="tourBar" hidden><div class="tc"><span id="tCount"></span><b id="tName"></b></div><p id="tText"></p><div class="tb"><button id="tPrev">Previous</button><button id="tNext">Next</button><button id="tExit">Exit tour</button></div></div>
+<div class="hint" id="hint">Drag to orbit · scroll to zoom · tap a building</div>
+<div class="fallback"><img src="assets/images/campus-fallback.svg" alt="Stylised illustration of the campus"></div>
+</section>
+
+<section id="about" class="sec"><div class="wrap split">
+<div><h2>About RPS</h2><p class="lead">RPS Public School stands on the Dharuhera–Bhiwadi Expressway in Rewari district, Haryana, a CBSE-affiliated school founded in 2015.</p>
+<p>This site pairs the school's published campus figures with an interactive 3D visualization, so families can get a feel for the spaces where learning, sport and play happen.</p></div>
+<dl class="facts">
+<div><dt>Founded</dt><dd>2015</dd></div><div><dt>CBSE affiliation no.</dt><dd>531312</dd></div><div><dt>School code</dt><dd>41300</dd></div><div><dt>Classrooms</dt><dd>85</dd></div>
+<div><dt>Campus area</dt><dd>12,416.372 m²</dd></div><div><dt>Built-up area</dt><dd>14,397.353 m²</dd></div><div><dt>Playground</dt><dd>4,113 m²</dd></div><div><dt>Library</dt><dd>4,631+ books</dd></div></dl>
+</div></section>
+
+<section id="academics" class="sec alt"><div class="wrap"><h2>Academics</h2><p class="lead">Broad areas of learning that a school day moves through. These are general descriptions, not an official curriculum listing.</p>
+<div class="grid3">
+<article class="card"><h3>Foundation</h3><p>Early years built on play, language and confidence.</p></article>
+<article class="card"><h3>Science</h3><p>Observation, experiment and explanation in the lab and the field.</p></article>
+<article class="card"><h3>Mathematics</h3><p>Reasoning and problem solving, from number sense to proof.</p></article>
+<article class="card"><h3>Languages</h3><p>Reading, writing and speaking with clarity in more than one language.</p></article>
+<article class="card"><h3>Humanities</h3><p>Understanding people, places and the past.</p></article>
+<article class="card"><h3>Digital learning</h3><p>Using technology thoughtfully to research, create and collaborate.</p></article></div></div></section>
+
+<section id="campus" class="sec"><div class="wrap"><h2>The campus</h2><p class="lead">Choose a place to fly to it in the 3D model above. The model is a design visualization, not a survey.</p>
+<div class="chips" id="chips"></div></div></section>
+
+<section id="activities" class="sec alt"><div class="wrap"><h2>Activities</h2><p class="lead">The campus is laid out around movement and making. Categories below describe the kinds of experiences a school of this type offers.</p>
+<div class="grid4">
+<div class="card sm"><h3>Sports</h3></div><div class="card sm"><h3>Cricket</h3></div><div class="card sm"><h3>Athletics</h3></div><div class="card sm"><h3>Creative arts</h3></div>
+<div class="card sm"><h3>Science</h3></div><div class="card sm"><h3>Technology</h3></div><div class="card sm"><h3>Clubs</h3></div><div class="card sm"><h3>Student development</h3></div></div></div></section>
+
+<section id="achievements" class="sec"><div class="wrap"><h2>Achievements</h2><p class="lead">We do not list awards or figures here that we cannot verify. For results and recognitions, please refer to the school's official website. The themes below are general values, not claims.</p>
+<ul class="themes"><li>Learning</li><li>Discipline</li><li>Sport</li><li>Creativity</li><li>Exploration</li></ul></div></section>
+
+<section id="admissions" class="sec alt cta-sec"><div class="wrap center"><h2>Begin your journey</h2><p class="lead">For admission details, please speak to the school directly.</p>
+<div class="cta"><a class="btn solid" href="mailto:rpsdharuhera@gmail.com?subject=Admission%20enquiry">Enquire now</a><a class="btn" href="tel:+919467064534">Contact school</a></div></div></section>
+
+<section id="contact" class="sec"><div class="wrap split"><div><h2>Contact</h2><address><b>RPS Public School, Dharuhera</b><br>V.P.O. Ghatal Mahaniyawas,<br>Dharuhera–Bhiwadi Expressway,<br>Rewari, Haryana 123401</address>
+<p>Phone <a href="tel:+919467064534">+91 94670 64534</a><br>Email <a href="mailto:rpsdharuhera@gmail.com">rpsdharuhera@gmail.com</a></p></div>
+<div class="cta v"><a class="btn solid" href="tel:+919467064534">Call</a><a class="btn" href="mailto:rpsdharuhera@gmail.com">Email</a><a class="btn" href="https://rpsdharuhera.edu.in/" target="_blank" rel="noopener">Official website</a><a class="btn" href="https://rpsdharuhera.edu.in/gallery.aspx" target="_blank" rel="noopener">Gallery</a></div></div></section>
+
+<footer><div class="wrap fgrid"><div><b class="fb">RPS Public School, Dharuhera</b><p class="tag">Where curiosity becomes capability.</p></div>
+<div><a href="#about">About</a><a href="#academics">Academics</a><a href="#campus">Campus</a><a href="#admissions">Admissions</a></div>
+<div><a href="tel:+919467064534">+91 94670 64534</a><a href="mailto:rpsdharuhera@gmail.com">rpsdharuhera@gmail.com</a><a href="https://rpsdharuhera.edu.in/" target="_blank" rel="noopener">rpsdharuhera.edu.in</a></div></div>
+<p class="small">Interactive 3D campus visualization is a digital representation and is not an architectural survey.<br>© <span id="yr">2026</span> RPS Public School, Dharuhera. Unofficial interactive presentation.</p></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="js/data.js"></script><script src="js/scene.js"></script><script src="js/campus.js"></script><script src="js/interaction.js"></script><script src="js/tour.js"></script><script src="js/navigation.js"></script><script src="js/main.js"></script>
+</body></html>
